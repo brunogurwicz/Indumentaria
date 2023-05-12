@@ -1,0 +1,9 @@
+<button><a href='@Url.Action("SeleccionarIndumentaria")'><h2>Seleccionar Equipos</h2></a></button>
+@foreach (string item in ViewBag.EquiposIndumentaria.Keys)
+{
+    <b><p>@item</p></b>
+    <img src="/imagenes/Remeras/@ViewBag.EquiposIndumentaria[item].Camiseta" alt="Foto Remera" width="100px">
+    <img src="/imagenes/Pantalones/@ViewBag.EquiposIndumentaria[item].Pantalon" alt="Foto Short" width="100px">
+    <img src="/imagenes/Medias/@ViewBag.EquiposIndumentaria[item].Medias" alt="Foto Medias" width="100px">
+}
+

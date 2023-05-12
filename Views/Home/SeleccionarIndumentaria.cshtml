@@ -1,0 +1,52 @@
+<h3>Seleccion de Indumentaria</h3>
+
+<form action='@Url.Action("GuardarIndumentaria", "Home")'>
+      @foreach (string item in ViewBag.ListaEquipos)
+                {
+                    <b>@(item + " -|-|-|- ")</b>
+                }
+                <input type="number" name="equipo" required>
+    <table>
+
+        <tr>
+            <td>
+                @foreach (string item in ViewBag.ListaRemeras)
+                {
+                    <img src="/imagenes/remeras/@item" alt="Foto Remera" width="100px">
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" name="remera" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @foreach (string item in ViewBag.ListaPantalones)
+                {
+                    <img src="/imagenes/pantalones/@item" alt="Foto Pantalon" width="100px">
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" name="pantalon" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @foreach (string item in ViewBag.ListaMedias)
+                {
+                    <img src="/imagenes/medias/@item" alt="Foto Medias" width="100px">
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" name="medias" required>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="guardar conjunto de equipo">
+</form>
